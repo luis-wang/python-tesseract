@@ -143,6 +143,8 @@ def image_to_string(image, lang=None, boxes=False):
         cleanup(output_file_name)
 
 if __name__ == '__main__':
+    
+    
     if len(sys.argv) == 2:
         filename = sys.argv[1]
         try:
@@ -151,6 +153,7 @@ if __name__ == '__main__':
             sys.stderr.write('ERROR: Could not open file "%s"\n' % filename)
             exit(1)
         print image_to_string(image)
+        
     elif len(sys.argv) == 4 and sys.argv[1] == '-l':
         lang = sys.argv[2]
         filename = sys.argv[3]
